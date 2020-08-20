@@ -25,14 +25,17 @@ const id=props.match.params.id
     fetch("http://localhost:3333/api/reports")
       .then((response) => response.json())
       .then((data) => {
-     
+     // eslint-disable-next-line
         getReports(data.filter((c) => c.candidateId == props.match.params.id)); 
       });
   };
   useEffect(() => {
+    // eslint-disable-next-line
      fetchCandidate();
      fetchReports();
-
+   
+    // eslint-disable-line react-hooks/exhaustive-deps 
+     // eslint-disable-next-line
   }, []);
 
   return (
