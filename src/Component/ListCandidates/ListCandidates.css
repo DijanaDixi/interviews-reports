@@ -1,0 +1,14 @@
+h2{
+    display: inline-block;
+    color: cadetblue;
+}
+.form-control{
+    display: inline-block !important;
+    width: 200px !important;
+    float: right;
+    border-radius: 30px !important;
+    margin-top: 10px;
+}
+.input-holder{
+    margin-top: 50px;
+}
