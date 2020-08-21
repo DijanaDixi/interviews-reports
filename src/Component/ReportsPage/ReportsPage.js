@@ -7,8 +7,9 @@ import ReportsTable from "../ReportsTable/ReportsTable";
 import "./ReportsPage.css";
 
 function ReportsPage(props) {
-
+// console.log(props)
 const id=props.match.params.id
+console.log(id)
   const [candidat, getCandidat] = useState({});
 
   const [reports, getReports] = useState([]);
@@ -16,8 +17,9 @@ const id=props.match.params.id
     fetch("http://localhost:3333/api/candidates/" +id )
       .then((response) => response.json())
       .then((data) => {
-        getCandidat(data);
         console.log(data);
+        getCandidat(data);
+       
     
       });
   };
@@ -25,6 +27,7 @@ const id=props.match.params.id
     fetch("http://localhost:3333/api/reports")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
      // eslint-disable-next-line
         getReports(data.filter((c) => c.candidateId == props.match.params.id)); 
       });

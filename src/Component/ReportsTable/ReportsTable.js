@@ -2,12 +2,12 @@ import React from "react";
 import Report from "../Report/Report";
 
 function ReportsTable({ reports }) {
+  // console.log(reports)
   const allReports = reports.map((report) => {
     return <Report report={report} key={report.id} />;
   });
 
   return (
-  
     <>
       <div className="row">
         <div className="col-10 offset-1">

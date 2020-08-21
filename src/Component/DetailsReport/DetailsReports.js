@@ -5,7 +5,6 @@ function DetailsReport({ candidat }) {
   // console.log(candidat)
   return (
     <>
-   
       <div className="container">
         <div className="row reports">
           <div className="col-3">
